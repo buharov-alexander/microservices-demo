@@ -20,4 +20,9 @@ public class JokeController {
     public JokeDTO getRandomJoke() {
         return jokeService.getJoke();
     }
+
+    @GetMapping("/random/send")
+    public JokeDTO sendRandomJoke() {
+        return jokeService.sendJoke();
+    }
 }

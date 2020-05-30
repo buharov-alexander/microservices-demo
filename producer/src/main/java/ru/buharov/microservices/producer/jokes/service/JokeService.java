@@ -5,4 +5,6 @@ import ru.buharov.microservices.common.dto.JokeDTO;
 public interface JokeService {
 
     JokeDTO getJoke();
+
+    JokeDTO sendJoke();
 }
