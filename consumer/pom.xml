@@ -18,7 +18,7 @@
         <java.version>1.8</java.version>
         <ru.buharov.microservices.version>1.0-SNAPSHOT</ru.buharov.microservices.version>
 
-        <docker.image.prefix>buharovalexander/microservices-demo</docker.image.prefix>
+        <docker.image.name>buharovalexander/microservices-demo-consumer</docker.image.name>
         <jackson.version>2.11.0</jackson.version>
     </properties>
 
@@ -78,10 +78,7 @@
                 <artifactId>dockerfile-maven-plugin</artifactId>
                 <version>1.4.13</version>
                 <configuration>
-                    <repository>${docker.image.prefix}/${project.artifactId}</repository>
-                    <buildArgs>
-                        <JAR_FILE>${project.build.finalName}.jar</JAR_FILE>
-                    </buildArgs>
+                    <repository>${docker.image.name}</repository>
                 </configuration>
             </plugin>
         </plugins>
