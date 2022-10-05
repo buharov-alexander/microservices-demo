@@ -19,7 +19,7 @@
         <ru.buharov.microservices.version>1.0-SNAPSHOT</ru.buharov.microservices.version>
 
         <docker.image.name>buharovalexander/microservices-demo-consumer</docker.image.name>
-        <jackson.version>2.11.0</jackson.version>
+        <jackson.version>2.12.6.1</jackson.version>
     </properties>
 
     <dependencies>
