@@ -25,6 +25,8 @@ services:
     - kafka
   consumer:
     image: buharovalexander/microservices-demo-consumer:latest
+    ports:
+      - 8081:8080
     environment:
       KAFKA_HOSTNAME: kafka
       KAFKA_PORT: 9092
