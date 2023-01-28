@@ -15,7 +15,7 @@ services:
     ports:
       - 27017:27017
   producer:
-    image: buharovalexander/microservices-demo-producer
+    image: buharovalexander/microservices-demo-producer:latest
     ports:
       - 8080:8080
     environment:
@@ -24,7 +24,7 @@ services:
     depends_on:
     - kafka
   consumer:
-    image: buharovalexander/microservices-demo-consumer
+    image: buharovalexander/microservices-demo-consumer:latest
     environment:
       KAFKA_HOSTNAME: kafka
       KAFKA_PORT: 9092
