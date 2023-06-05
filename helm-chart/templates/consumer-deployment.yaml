@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: consumer-deployment
+  labels:
+    app: consumer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: consumer
+  template:
+    metadata:
+      labels:
+        app: consumer
+    spec:
+      containers:
+        - name: consumer
+          image: buharovalexander/microservices-demo-consumer:latest
+          env:
+            - name: KAFKA_HOSTNAME
+              value: kafka-service
+            - name: KAFKA_PORT
+              value: "9092"
+            - name: MONGO_HOSTNAME
+              value: mongodb-service
+            - name: MONGO_PORT
+              value: "27017"
+          ports:
+            - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: consumer-service
+spec:
+  selector:
+    app: consumer
+  type: NodePort
+  ports:
+  - name: http
+    port: 8080
+    targetPort: 8080
+    nodePort: 30037
+    protocol: TCP
