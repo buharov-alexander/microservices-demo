@@ -20,7 +20,7 @@
 
         <docker.image.name>buharovalexander/microservices-demo-consumer</docker.image.name>
         <jackson.version>2.11.0</jackson.version>
-        <guava.version>31.1-jre</guava.version>
+        <guava.version>32.0.0-jre</guava.version>
     </properties>
 
     <dependencies>
