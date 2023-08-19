@@ -1,6 +1,6 @@
 # Microservices Demo
 
-It is demo project where we created two services and configured communication via Kafka.
+It is a demo project where we created two services and configured communication via Kafka.
 
 ![](https://github.com/buharov-alexander/microservices-demo/blob/master/common/src/main/resources/Schema.png)
 
@@ -42,6 +42,11 @@ This command starts next containers:
 
 ## Launch using k8s
 Minikube was used to test deploy ([Helm configuration](https://github.com/buharov-alexander/microservices-demo/blob/master/common/src/main/helm-chart)).
+Manage Minikube:
+```
+minikube status|start|stop
+```
+Deploy the demo project into Minikube:
 ```
 helm install my-release ./helm-chart
 ```
